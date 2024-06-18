@@ -1,0 +1,76 @@
+.login-container {
+	max-width: 400px;
+	/* Adjust the max-width to your desired width */
+	margin: 0 auto;
+	padding: 20px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	background-color: #fff;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+  }
+  
+  .form-group {
+	margin-bottom: 20px;
+	width: 100%;
+  }
+  
+  label {
+	font-weight: bold;
+  }
+  
+  input[type="email"],
+  input[type="password"] {
+	width: 100%;
+	padding: 10px;
+	border-radius: 5px;
+  }
+  
+  .btn-primary,
+  .btn-secondary {
+	width: 80%;
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	color: #fff;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+  }
+  
+  .btn-primary {
+	background-color: #007bff;
+  }
+  
+  .btn-secondary {
+	background-color: grey;
+  }
+  
+  button[type="submit"]:hover {
+	background-color: #0056b3;
+  }
+  
+ 
+  
+  .btn-section {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+  }
+
+  .ng-invalid{
+
+	background-color: #f5f5f5;
+    color: #333;
+    border-left: 5px solid red; 
+  }
+
+  .ng-valid{
+	background-color: #f5f5f5;
+    color: #333;
+    border-left: 5px solid green; 
+  }
+
+  
+
+  

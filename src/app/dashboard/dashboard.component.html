@@ -1,0 +1,23 @@
+<section class="services py-5 bg-light1 text-center">
+    <div class="container">
+       <div class="row">
+           <div *ngFor="let agr of agrupado" class="col-xs-12 col-sm-6 col-md-3">
+               <a href="#" class="text-body">
+    		    <div class="card bg-light mb-3">
+    		        <div class="card-body">
+    		           <i class="fa fa-cogs fa-4x "></i><br>
+                        <h3 class="text-secondary">{{agr.category}}</h3>
+                    	<h5>{{agr.totalAmount| currency:'COP':'$ '}}</h5>
+    		        </div>
+    		    </div>
+    		   </a>
+    		</div>
+
+    	 
+    	   
+    
+       
+    	   
+       </div>
+    </div>
+</section>

@@ -1,0 +1,64 @@
+<div class="container">
+    <h3 class="h3">Productos </h3>
+   
+    <div class="row">
+        <div *ngFor="let product of products" class="col-md-3 col-sm-6 pt-2">
+            <div class="product-grid">
+                <div class="product-image">
+                    <a href="#">
+                        <img class="pic-1" src="{{product.thumbnail}}">
+                    </a>
+                    <ul class="social">
+                        <li><button data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="modal(product.id)" data-tip="Quick View"><i class="fa fa-search"></i></button></li>
+                    </ul>
+                    <span class="product-new-label">Sale</span>
+                    <span class="product-discount-label">{{product.discountPercentage}}%</span>
+                </div>
+                
+                <ul class="rating">
+                    <li class="fa fa-star"></li>
+                    <li class="fa fa-star"></li>
+                    <li class="fa fa-star"></li>
+                    <li class="fa fa-star"></li>
+                    <li class="fa fa-star disable"></li>
+                </ul>
+                <div class="product-content">
+                    <h3 class="title"><a  data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="modal(product.id)">{{product.title}}</a></h3>
+                    <div class="price">${{product.price}}
+                        <span>$ {{(product.price*product.discountPercentage) | number:'3.1-5'}}</span>
+                    </div>
+                    <button  data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="modal(product.id)" class="add-to-cart" >+ Ver imagenes</button>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Imagenes</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div *ngFor="let img of imagenes"  class="col-md-6 col-sm-6">
+                <img src="{{img}}" class="img-fluid" > 
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<hr>
+
+
+
+
+

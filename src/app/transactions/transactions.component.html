@@ -1,0 +1,40 @@
+
+<h1>Lista transaciones</h1>
+<div class="container">
+  <label for="search">Buscar por Descripción: </label>
+  <input type="search" name="search" [(ngModel)]='search' (ngModelChange)="listabuscada()"  id="search"></div>
+<table id="datatablesSimple" class="table table-hover">
+    <thead>
+      <tr>
+        <th  (click)="onChangeOrder('type')">Tipo <span [ngClass]="orderDirection.type ? 'order-pointer-down' : 'order-pointer-up'"></span></th>
+        <th>Fuente</th>
+        <th>Destino</th>
+        <th>Monto</th>
+        <th (click)="onChangeOrder('category')">Categoría <span [ngClass]="orderDirection.category ? 'order-pointer-down' : 'order-pointer-up'"></span></th>
+        <th (click)="onChangeOrder('description')">Descripción <span [ngClass]="orderDirection.description ? 'order-pointer-down' : 'order-pointer-up'"></span></th>
+        <th>Estado</th>
+        <th>Balance</th>
+        <th>Fecha</th>
+      </tr>
+    </thead>
+    
+    <tbody>
+      <tr *ngFor="let tr of transactions">
+        <td>{{tr.type}}</td>
+        <td>{{tr.source}}</td>
+        <td>{{tr.destination}}</td>
+        <td>{{tr.amount| currency:'COP':'$ '}}</td>
+        <td>{{tr.category}}</td>
+        <td>{{tr.description}}</td>
+        <td>{{tr.status}}</td>
+        <td>{{tr.balance| currency:'COP':'$ '}}</td>
+        <td>{{tr.date | date:'medium'}}</td> 
+      </tr>
+      
+    </tbody>
+  </table>
+
+  
+
+ 
+

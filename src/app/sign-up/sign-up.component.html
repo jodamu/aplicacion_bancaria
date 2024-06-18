@@ -1,0 +1,25 @@
+<div class="container">
+	<form class="login-container" [formGroup]="loginForm" (submit)="onSubmit()">
+        <div class="form-group">
+            <label for="firstName">Nombres:</label>
+            <input type="firstName" class="form-control" id="firstName" formControlName="firstName">
+          </div>
+          <div class="form-group">
+            <label for="lastName">Apellidos:</label>
+            <input type="lastName" class="form-control" id="lastName" formControlName="lastName">
+          </div>
+
+		<div class="form-group">
+		  <label for="email">Email:</label>
+		  <input type="email" class="form-control" id="email" formControlName="email">
+		</div>
+		<div class="form-group">
+		  <label for="password">Password:</label>
+		  <input type="password" class="form-control" id="password" formControlName="password">
+		</div>
+		<div class="btn-section">
+		  <button type="button" class="btn btn-secondary" routerLink="/signup">Sign Up</button>
+		  <button type="submit" class="btn btn-primary" [disabled]="loginForm.invalid">Create</button>
+		</div>
+	  </form>
+</div>

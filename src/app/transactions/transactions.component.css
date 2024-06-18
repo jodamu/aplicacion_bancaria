@@ -1,0 +1,22 @@
+.order-pointer-up::after{
+    cursor: pointer;
+    color: #007bff;
+    font-size: 1.5em;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    content: "↑";
+}
+
+.order-pointer-down::after{
+    content: "↓";
+    cursor: pointer;
+    color: #007bff;
+    font-size: 1.5em;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+}
